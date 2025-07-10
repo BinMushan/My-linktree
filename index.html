@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Futuristic LinkTree</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- 3D Background & Icon Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="dark-mode"> <!-- Start in Dark Mode -->
+
+  <!-- 🌗 Theme Toggle Switch -->
+  <div class="toggle-theme">
+    <label class="switch">
+      <input type="checkbox" id="theme-toggle" checked />
+      <span class="slider">
+        <!-- Sun/Moon Icons -->
+        <i class="ph ph-sun theme-icon" id="light-icon"></i>
+        <i class="ph ph-moon theme-icon" id="dark-icon"></i>
+      </span>
+    </label>
+  </div>
+
+  <!-- 🎮 3D Canvas Background -->
+  <canvas id="bg"></canvas>
+
+  <!-- 🧪 Code Rain Effects (Left + Right) -->
+  <div class="code-rain left"></div>
+  <div class="code-rain right"></div>
+
+  <!-- 💎 Glass Card with Typewriter Text and Links -->
+  <div class="glass-card" role="main" aria-label="Link Tree Card">
+    <h2 class="typewriter" id="intro-text">Welcome to my LinkTree</h2>
+    <h1 id="name-type" aria-live="polite"></h1>
+    <p>@binmushan</p>
+
+    <!-- 🔗 Social Links -->
+    <ul class="links">
+      <li><a href="https://www.linkedin.com/in/binmushan?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" aria-label="LinkedIn link">LinkedIn</a></li>
+      <li><a href="https://www.instagram.com/mmb_mushan?igsh=ZGp2Y2R5bWJmbTNz&utm_source=qr" aria-label="Instagram link">Instagram</a></li>
+      <li><a href="https://www.tiktok.com/@mmb_mushan?_t=ZS-8xuUXgLJTr6&_r=1" aria-label="TikTok link">TikTok</a></li>
+      <li><a href="https://www.facebook.com/share/1GTHxVHdX5/?mibextid=wwXIfr" aria-label="Facebook link">Facebook</a></li>
+      <li><a href="http://wa.me/94763029413" aria-label="WhatsApp link">WhatsApp</a></li>
+      <li><a href="#" aria-label="Portfolio link">Portfolio</a></li>
+    </ul>
+  </div>
+
+  <!-- 🎵 Background Theme Music -->
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_126bb0c345.mp3?filename=ambient-futuristic-sci-fi-110397.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- 🚀 Main Script -->
+  <script src="script.js"></script>
+</body>
+</html>
