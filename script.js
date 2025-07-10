@@ -168,3 +168,10 @@ document.addEventListener('mousemove', (e) => {
   lightCursor.style.left = `${e.clientX}px`;
   lightCursor.style.top = `${e.clientY}px`;
 });
+
+window.addEventListener('click', () => {
+  const music = document.getElementById('bg-music');
+  if (music && music.paused) {
+    music.play();
+  }
+}, { once: true });
