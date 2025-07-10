@@ -1,10 +1,10 @@
-// 🌗 Theme toggle setup
+//  Theme toggle setup
 const toggleInput = document.getElementById('theme-toggle');
 const body = document.body;
 const lightIcon = document.getElementById('light-icon');
 const darkIcon = document.getElementById('dark-icon');
 
-// 🌓 Toggle dark/light mode when switch is changed
+//  Toggle dark/light mode when switch is changed
 toggleInput.addEventListener('change', () => {
   body.classList.toggle('dark-mode');
 
@@ -21,10 +21,10 @@ toggleInput.addEventListener('change', () => {
     setSwitchColors('#004d4d', 'rgba(0, 77, 77, 0.3)');
   }
 
-  updateLineColors(); // Update 3D line color with mode
+  updateLineColors(); 
 });
 
-// 🌑 Ensure dark mode is set on first load
+
 window.addEventListener('DOMContentLoaded', () => {
   // Set dark mode visually
   body.classList.add('dark-mode');
@@ -38,21 +38,21 @@ window.addEventListener('DOMContentLoaded', () => {
   updateLineColors();
 });
 
-// 🔧 Utility to change color of code rain effect
+// Utility to change color of code rain effect
 function setCodeRainColor(color) {
   document.querySelectorAll('.code-rain').forEach(elem => {
     elem.style.color = color;
   });
 }
 
-// 🔧 Utility to update toggle switch color
+// Utility to update toggle switch color
 function setSwitchColors(color, bgColor) {
   const slider = document.querySelector('.slider');
   slider.style.color = color;
   slider.style.backgroundColor = bgColor;
 }
 
-// 💬 Typewriter effect loop for name and title
+// Typewriter effect loop for name and title
 const textList = ["Welcome to my LinkTree", "I'm Bin Mushan", "An Undergraduate"];
 let textIndex = 0;
 let charIndex = 0;
@@ -89,7 +89,7 @@ setTimeout(() => {
   typeNext();
 }, 1800);
 
-// 💻 Code rain generator
+
 const rainText = `01 <div> function() return [CSS3] <script> className </div> const var =>`;
 const leftRain = document.querySelector('.code-rain.left');
 const rightRain = document.querySelector('.code-rain.right');
@@ -153,13 +153,13 @@ window.addEventListener('resize', () => {
   renderer.setSize(window.innerWidth, window.innerHeight);
 });
 
-// 🌐 Update 3D line material based on current theme
+//  Update 3D line material based on current theme
 function updateLineColors() {
   currentMaterial = body.classList.contains('dark-mode') ? materialDark : materialLight;
   lines.forEach(line => line.material = currentMaterial);
 }
 
-// ⚡ Mouse-following lightning cursor glow
+//  Mouse-following lightning cursor glow
 const lightCursor = document.createElement('div');
 lightCursor.className = 'cursor-light';
 document.body.appendChild(lightCursor);
